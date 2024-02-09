@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333333; /* Dark gray background */
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #ffffff; /* White text color */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            color: #ffffff; /* White text color */
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+            transition: border-color 0.3s;
+            color: #333333; /* Dark gray text color */
+            background-color: #ffffff; /* White background color for input fields */
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="submit"]:hover {
+            outline: none;
+            border-color: #ff6b6b; /* Coral */
+        }
+        input[type="submit"] {
+            background-color: #ff5e78; /* Pink Raspberry */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .login-link a {
+            color: #ff5e78; /* Pink Raspberry */
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: #ff6b6b; /* Coral */
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="rollno">Roll No:</label>
+            <input type="text" id="rollno" name="rollno" required maxlength="6">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required max="150">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
+            <input type="submit" id="signup-button" value="Sign Up">
+        </form>
+        <p class="login-link">Already have an account? <a href="#">Login</a></p>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <!-- Include external JavaScript file -->
+    <script src="signup.js"></script>
+</body>
+</html>
